@@ -28,6 +28,13 @@ const interns = [
         telephone: "06 23 23 23 23",
         email: "jean-luc.aubert@aelion.fr",
     },
+    {
+        id: 4,
+        lastname: "Bond",
+        firstname: "James",
+        telephone: "07 07 07 07 07",
+        email: "james.bond@aelion.fr",
+    },
 ]; //objets définis de façon littérale
 
 // Displaying all of interns in a row in a table
@@ -59,6 +66,5 @@ for (const intern of interns) {
     newTr.appendChild(emailTd)
 
     //Append the brand new complete tr to tbody
-    //test
     tbody.appendChild(newTr)
 }
