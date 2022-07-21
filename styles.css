@@ -27,6 +27,7 @@ table thead {
     *   rgb(0..100%, 0..100%, 0..100%) rgba(0..100%, 0..100%, 0..100%, 0..1)
     * Couleurs HSL (Hue Saturation Luminance)
     *   hsl(0..255, 0..100%, 0..100%), hsl(0..255, 0..100%, 0..100%, 0..1)
+    test
     */
     height: .5em;
 }

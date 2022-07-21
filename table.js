@@ -59,5 +59,6 @@ for (const intern of interns) {
     newTr.appendChild(emailTd)
 
     //Append the brand new complete tr to tbody
+    //test
     tbody.appendChild(newTr)
 }
