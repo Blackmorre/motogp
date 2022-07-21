@@ -9,21 +9,21 @@ console.log("Hello JS");
 const interns = [
     {
         id: 1,
-        lastname: "Aubert",
+        lastname: "Zanzibar",
         firstname: "Jean-Luc",
         telephone: "06 23 23 23 23",
         email: "jean-luc.aubert@aelion.fr",
     },
     {
         id: 2,
-        lastname: "Aubert",
+        lastname: "Dutronc",
         firstname: "Jean-Luc",
         telephone: "06 23 23 23 23",
         email: "jean-luc.aubert@aelion.fr",
     },
     {
         id: 3,
-        lastname: "Aubert",
+        lastname: "Tartuffe",
         firstname: "Jean-Luc",
         telephone: "06 23 23 23 23",
         email: "jean-luc.aubert@aelion.fr",
@@ -67,4 +67,13 @@ for (const intern of interns) {
 
     //Append the brand new complete tr to tbody
     tbody.appendChild(newTr)
+}
+
+// Event listener
+const sortTableOnName = () => {
+    console.log('Hello Sorter');
+    const trs = [...document.querySelector('tbody').childNodes] // "[]" = tableau; "..." = spread operator
+    for(let tr of trs) {
+        tr.remove();
+    }
 }
