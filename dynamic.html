@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic app</title>
+</head>
+
+<body>
+    <div id="mon--application" class="my-app" buyMeACoffee></div>
+    <script>
+        const me = 'Monica'; const you = 'JL';
+        const dock = document.querySelector('[buyMeACoffee]');
+        // const byId = document.getElementById('mon--application');     
+        dock.innerHTML = `${you} buy a coffee to < strong > ${ me } <strong>`;
+            const interns = [
+            'Jean-Luc',
+            'Sasha',
+            'Monica',
+            'Tiffany'
+            ]
+            
+            //1. Creer une balise liste     
+            const liste = document.createElement('ul');
+            //2. Parcourir un a un chacundes elements de interns     
+            for (let numero_dans_la_liste = 0; numero_dans_la_liste< interns.length; numero_dans_la_liste++) {         
+        const li = document.createElement('li');
+            li.innerHTML = interns[numero_dans_la_liste];
+            liste.appendChild(li);
+        }
+            dock.appendChild(liste);
+
+    </script>
+</body>
+
+</html>

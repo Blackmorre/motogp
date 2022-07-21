@@ -1,0 +1,37 @@
+/**
+* Global styles for my documents
+*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    height: 3em;
+}
+
+table>thead>tr>th {
+    border-bottom-style: solid;
+    border-color: #000;
+    border-width: 0.16em;
+}
+
+table thead {
+    background-color: blueviolet;
+    /**
+    * Hexa court :  #000 à #FFF         256 couleurs
+    * Hexa long :   #000000 à #FFFFFF   16 millions couleurs
+    * Couleur rgb et rgba en relatif ou absolu :
+    *   rgb(0..255, 0..255, 0..255) rgba(0..255, 0..255, 0..255, 0..1)
+    *   rgb(0..100%, 0..100%, 0..100%) rgba(0..100%, 0..100%, 0..100%, 0..1)
+    * Couleurs HSL (Hue Saturation Luminance)
+    *   hsl(0..255, 0..100%, 0..100%), hsl(0..255, 0..100%, 0..100%, 0..1)
+    */
+    height: .5em;
+}
+
+table tbody tr:nth-child(even){
+    background-color:hsl(200,25%,30%);
+}
+ 
