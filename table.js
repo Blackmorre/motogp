@@ -37,43 +37,52 @@ const interns = [
     },
 ]; //objets définis de façon littérale
 
-// Displaying all of interns in a row in a table
-const tbody = document.querySelector('tbody') // selectionne la partie du document html (head, body, footer)
+const rowMaker = () => {
+    // Displaying all of interns in a row in a table
+    const tbody = document.querySelector('tbody') // selectionne la partie du document html (head, body, footer)
 
-for (const intern of interns) {
-    //1. Create a tr element
-    const newTr = document.createElement('tr')
-    
-    //2. Create a td element and write intern infos into
-    const idTd = document.createElement('td')
-    idTd.innerHTML = intern.id
-    newTr.appendChild(idTd)
+    for (const intern of interns) {
+        //1. Create a tr element
+        const newTr = document.createElement('tr')
+        
+        //2. Create a td element and write intern infos into
+        const idTd = document.createElement('td')
+        idTd.innerHTML = intern.id
+        newTr.appendChild(idTd)
 
-    const lastnameTd = document.createElement('td')
-    lastnameTd.innerHTML = intern.lastname
-    newTr.appendChild(lastnameTd)
+        const lastnameTd = document.createElement('td')
+        lastnameTd.innerHTML = intern.lastname
+        newTr.appendChild(lastnameTd)
 
-    const firstnameTd = document.createElement('td')
-    firstnameTd.innerHTML = intern.firstname
-    newTr.appendChild(firstnameTd)
+        const firstnameTd = document.createElement('td')
+        firstnameTd.innerHTML = intern.firstname
+        newTr.appendChild(firstnameTd)
 
-    const telephoneTd = document.createElement('td')
-    telephoneTd.innerHTML = intern.telephone
-    newTr.appendChild(telephoneTd)
+        const telephoneTd = document.createElement('td')
+        telephoneTd.innerHTML = intern.telephone
+        newTr.appendChild(telephoneTd)
 
-    const emailTd = document.createElement('td')
-    emailTd.innerHTML = intern.email
-    newTr.appendChild(emailTd)
+        const emailTd = document.createElement('td')
+        emailTd.innerHTML = intern.email
+        newTr.appendChild(emailTd)
 
-    //Append the brand new complete tr to tbody
-    tbody.appendChild(newTr)
+        //Append the brand new complete tr to tbody
+        tbody.appendChild(newTr)
+    }
 }
 
-// Event listener
+rowMaker ()
+
+// Arrow function
 const sortTableOnName = () => {
     console.log('Hello Sorter');
-    const trs = [...document.querySelector('tbody').childNodes] // "[]" = tableau; "..." = spread operator
+    const trs = [... document.querySelector('tbody').childNodes] // "[]" = tableau; "..." = spread operator
     for(let tr of trs) {
-        tr.remove();
+       tr.remove()
     }
+
+    interns.sort((intern1, intern2) => {
+        return intern1.lastname.localeCompare(intern2.lastname)
+    })
+    rowMaker()
 }
