@@ -37,8 +37,11 @@ const interns = [
     },
 ]; //objets définis de façon littérale
 
-const rowMaker = () => {
+
     // Displaying all of interns in a row in a table
+const rowMaker = () => {
+
+
     const tbody = document.querySelector('tbody') // selectionne la partie du document html (head, body, footer)
 
     for (const intern of interns) {
@@ -84,5 +87,24 @@ const sortTableOnName = () => {
     interns.sort((intern1, intern2) => {
         return intern1.lastname.localeCompare(intern2.lastname)
     })
+    console.log(interns)
     rowMaker()
 }
+
+/*
+const moi = {
+    nom: 'Aubert',
+    age: 56
+}
+console.log(`Moi a le nom de ${moi.nom} et Moi a ${moi.age} ans`)
+// Affecter à un nouvel objet moi
+const toi = moi;
+console.log(`Toi a le nom ${moi.nom} et Toi a ${moi.age} ans`)
+toi.nom = 'Pia'
+console.log(`Moi maintenant a le nom de ${moi.nom} et Moi a ${moi.age} ans`)
+console.log(`Toi maintenant a le nom de ${toi.nom} et Toi a ${moi.age} ans`)
+const lui = {... moi}
+lui.nom = 'Casper le Fantôme'
+console.log(`Lui maintenant a le nom de ${lui.nom} et Lui a ${moi.age} ans`)
+console.log(`Moi maintenant a le nom de ${moi.nom} et Toi maintenant a le nom de ${toi.nom}`)
+*/
